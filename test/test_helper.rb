@@ -10,4 +10,16 @@ class ActiveSupport::TestCase
   fixtures :all
 
   # Add more helper methods to be used by all tests here...
+
+  def index_url()
+    return "/v1/pokemons"
+  end
+
+  def show_url(id)
+    return "/v1/pokemons/#{@id.to_s}"
+  end
+
+  def update_url(id)
+    return "/v1/pokemons/#{@id.to_s}"
+  end
 end

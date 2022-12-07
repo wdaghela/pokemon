@@ -3,4 +3,7 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
+  namespace :v1 do
+    resources :pokemons, only: [:index, :destroy, :update, :create, :show]
+  end
 end
